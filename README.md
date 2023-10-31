@@ -1,8 +1,15 @@
 # Discomfort zone
 
--   Tomi Jolkkonen <tomi.jolkkonen@protonmail.com>
+- Tomi Jolkkonen <tomi.jolkkonen@protonmail.com>
 
+## Miscellaneous programming 
 
-## Miscellaneous programming with Java, C++, Rust, Python, Haskell and Javascript
+- old simple (school) exercises with java, c, c++, rust, python, haskell and javascript
 
-2023
+learning & coming up next:
+- modern web development with javascript
+- shopify and liquid
+- data analytics and deep learning with python
+- compiler with haskell
+- game programming with c++
+- penetration testing
