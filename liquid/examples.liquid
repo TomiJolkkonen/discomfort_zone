@@ -489,3 +489,111 @@
   }
   {% endschema %}
   
+
+{% comment %}
+
+{% for product in collection.products %} 
+  {{ product.title }} 
+{% endfor %}
+
+{{ product.title | upcase | remove: "AWESOME"  }}
+
+{% for product in collection.products %} 
+  {{ product.handle }} 
+{% endfor %}
+
+{{ all_products['wayfarer-shades'].title }}
+
+<h1>{{ pages.about.title }}</h1>
+
+<h1>{{ blogs.myblog.title }}</h1>
+
+{% for collection in collections %} 
+	{{ collection.title }} 
+{% endfor %}
+
+{% if customer %} Hello {{ customer.first_name }} {% endif %}
+
+{% if handle contains 'private' %} 
+	Don't show this to anyone! ok? 
+{% endif %}
+
+{%- if line_item.fulfillment -%} 
+	<div class="note"> 
+    	{%- assign created_at = line_item.fulfillment.created_at | time_tag: format: 'date' -%} 
+        {{ 'customer.order.fulfilled_at_html' | t: date: created_at }}
+        <div> 
+        	{%- if line_item.fulfillment.tracking_url -%} 
+            	<a href="{{ line_item.fulfillment.tracking_url }}"> {{ 'customer.order.track_shipment' | t }} </a> 
+            {%- endif -%} 
+        	<div> 
+            	{{ line_item.fulfillment.tracking_company }} 
+               	{%- if line_item.fulfillment.tracking_number -%} 
+                    #{{ line_item.fulfillment.tracking_number }} 
+                {%- endif -%}
+            </div> 
+       </div> 
+   </div> 
+{%- endif -%}
+
+<div id="recommended-products"> 
+	<h2>Recommended: </h2> 
+    {% if recommendations.products_count > 0 %} 
+        {% for product in recommendations.products %} 
+            {{ product.title | link_to: product.url }} 
+        {% endfor %} 
+    {% endif %} 
+</div>
+
+<div id="recommended-products" data-product-id="{{ product.id }}" data-limit="5"> 
+	<h2>Recommended: </h2> 
+    {% if recommendations.performed %} 
+    	{% if recommendations.products_count > 0 %} 
+        	{% for product in recommendations.products %} 
+            	{{ product.title | link_to: product.url }} 
+            {% endfor %} 
+        {% endif %} 
+    {% else %} 
+    	<div class="placeholder">[Placeholder animation goes here]</div> 
+    {% endif %}
+</div>
+
+function ProductRecommendations(container) { 
+	var $container = (this.$container = $(container)); 
+    var productId = $container.data('product-id'); 
+    var limit = $container.data('limit'); 
+    var productRecommendationsUrlAndContainerClass = '/recommendations/products?&section_id=product-recommendations&limit=' + limit + '&product_id=' + productId; 	
+    $container.parent().load(productRecommendationsUrlAndContainerClass); }; 
+    document.addEventListener("DOMContentLoaded", function() { 
+    ProductRecommendations($('#recommended-products')); 
+});
+
+<ul> 
+	{% for tag in collection.all_tags %} 
+        {% if current_tags contains tag %} 
+            <li class="active">{{ tag | link_to_remove_tag: tag }}</li>
+        {% else %} 
+            <li>{{ tag | link_to_add_tag: tag }}</li> 
+        {% endif %} 
+    {% endfor %} 
+</ul>
+
+{% style %} 
+    .hero__background-color-container { 
+    	background-color: {{ section.settings.background_color }} 
+    } 
+{% endstyle %}
+
+{% assign downcased_title = product.title | downcase %}
+
+{% assign products = collection.products | sort: 'price' %} 
+{% for product in products %} 
+	<h4>{{ product.title }}</h4> 
+{% endfor %}
+
+{{ 'Shopify' | link_to: 'https://www.shopify.com','A link to Shopify' }}
+
+
+
+{% endcomment %}
+
