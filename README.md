@@ -4,5 +4,5 @@
 
 ## Miscellaneous programming 
 
-- old simple (school) exercises with various languages
+- old simple exercises with various languages
 
