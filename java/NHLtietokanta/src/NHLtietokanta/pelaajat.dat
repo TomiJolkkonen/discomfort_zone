@@ -1,0 +1,6 @@
+NHL pelaajat
+; Kenttien järjestys tiedostossa on seuraava:
+;id|etunimi sukunimi   |pelipaikka       |joukkue      |maalit|syötöt|pisteet|+/-|Corsi|TOI |FO|Save%|GAA
+1  |Esa Lindell        |puolustaja       |4            |3     |14    |17     |+7 |54.7 |1245|- |-    |-
+2  |Miro Heiskanen     |puolustaja       |4            |4     |15    |19     |+8 |55.1 |1300|- |-    |-
+4  |Jamie Benn         |hyökkääjä        |4            |13    |14    |27     |+17|60.1 |999 |- |-    |-

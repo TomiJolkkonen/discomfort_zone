@@ -1,0 +1,8 @@
+NHL-joukkueet
+;id|joukkue                 |Divisioona   |Konferenssi |Pelatut pelit |Pisteet |Kuntopuntari 10 viimeistä peliä
+1 |San Jose Sharks          |Tyynenmeren  |Läntinen    |20            |18      |7
+1 |Los Angeles Kings        |Tyynenmeren  |Läntinen    |21            |28      |6
+1 |New York Rangers         |Metropolitan |Itäinnen    |22            | 8      |12
+2 |Florida Panthers         |Atlantin     |Itäinen     |19            |26      |17
+2 |Tampa Bay Lightning      |Atlantin     |Itäinen     |20            |33      |0
+4 |Dallas Stars             |Keskinen     |Läntinen    |20            |17      |10

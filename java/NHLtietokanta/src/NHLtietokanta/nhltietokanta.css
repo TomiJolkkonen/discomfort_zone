@@ -1,0 +1,14 @@
+/*Tyylitiedosto NHL-tietokannalle
+ * @author Tomi Jolkkonen, tomi.j.jolkkonen@student.jyu.fi
+ * @version 1.0, 23.04.2020
+ */
+
+.virhe {
+   /* @SuppressWarning */
+   -fx-background-color: red;
+ }
+ 
+ .normaali {
+   /* @SuppressWarning */
+   -fx-background-color: white;
+ }
